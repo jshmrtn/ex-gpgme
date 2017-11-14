@@ -192,7 +192,7 @@ defmodule ExGpgme.Context do
   See `get_flag/2`.
 
   """
-  @spec get_flag!(context :: context, name :: String.t):: String.t
+  @spec get_flag!(context :: context, name :: String.t):: String.t | no_return
   def get_flag!(context, name) do
     case get_flag(context, name) do
       {:ok, result} -> result

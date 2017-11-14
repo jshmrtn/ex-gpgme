@@ -1,5 +1,8 @@
 # ExGpgme
 
+[![pipeline status](https://gitlab.airatel.com/joshmartin/ex-gpgme/badges/master/pipeline.svg)](https://gitlab.airatel.com/joshmartin/ex-gpgme/commits/master)
+
+
 ## Build Requirements
 
 * `rust` - `brew install rust`

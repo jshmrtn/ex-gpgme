@@ -3,14 +3,13 @@ defmodule ExGpgme.ContextTest do
 
   use ExUnit.Case
   alias ExGpgme.Context
-  ExGpgme.Results.{VerificationResult, Signature}
+  alias ExGpgme.Results.{VerificationResult, Signature, ImportResult}
 
   doctest Context, except: [
     from_protocol: 1,
     from_protocol!: 1,
     import: 2,
     find_key: 2,
-    find_key!: 2,
     encrypt: 4,
     sign_and_encrypt: 4,
     engine_info: 1,
@@ -21,11 +20,11 @@ defmodule ExGpgme.ContextTest do
     verify_opaque: 3,
   ]
 
-  @sender_fingerprint "95E9 3F47 0BCB 2E96 C648  572D FBFA 8591 3EE0 5E95"
+  @sender_fingerprint "95E93F470BCB2E96C648572DFBFA85913EE05E95"
   @sender_secret_key File.read!("priv/test/keys/sender_secret.asc")
   @sender_public_key File.read!("priv/test/keys/sender_public.asc")
 
-  @receiver_fingerprint "9D8A 23BA DCFA 63B5 8B3B  1CED 3910 6283 1D08 8C71"
+  @receiver_fingerprint "9D8A23BADCFA63B58B3B1CED391062831D088C71"
   @receiver_secret_key File.read!("priv/test/keys/receiver_secret.asc")
   @receiver_public_key File.read!("priv/test/keys/receiver_public.asc")
 
@@ -46,6 +45,11 @@ defmodule ExGpgme.ContextTest do
     :ok
   end
 
+  def import_test_key!(context, key) do
+    %ImportResult{imported: imported, unchanged: unchanged} = Context.import!(context, key)
+    1 = imported + unchanged
+  end
+
   setup(tags) do
     context = if tags[:context] do
       dirname = :erlang.crc32("#{inspect make_ref()}")
@@ -63,16 +67,16 @@ defmodule ExGpgme.ContextTest do
       Context.set_engine_home_dir!(context, path)
 
       if tags[:import_all] || tags[:import_sender_secret] do
-        Context.import!(context, @sender_secret_key)
+        import_test_key!(context, @sender_secret_key)
       end
       if tags[:import_sender_public] do
-        Context.import!(context, @sender_public_key)
+        import_test_key!(context, @sender_public_key)
       end
       if tags[:import_all] || tags[:import_receiver_secret] do
-        Context.import!(context, @receiver_secret_key)
+        import_test_key!(context, @receiver_secret_key)
       end
       if tags[:import_receiver_public] do
-        Context.import!(context, @receiver_public_key)
+        import_test_key!(context, @receiver_public_key)
       end
 
       if tags[:armor] do

@@ -64,7 +64,7 @@ pub fn set_flag<'a>(env: NifEnv<'a>, args: &[NifTerm<'a>]) -> NifResult<NifTerm<
 
 context_getter!(engine_info, context, env, {
     match engine::engine_info_to_term(context.engine_info(), env) {
-        Ok(result) => result,
+        Ok(result) => (atoms::ok(), result).encode(env),
         Err(_) => (atoms::error(), String::from("Could not decode cyphertext to utf8")).encode(env)
     }
 });
