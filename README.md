@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/jshmrtn/ex-gpgme/master/LICENSE)
 [![Build Status](https://travis-ci.org/jshmrtn/ex-gpgme.svg?branch=master)](https://travis-ci.org/jshmrtn/ex-gpgme)
-[![Hex.pm Version](https://img.shields.io/hexpm/v/crontab.svg?style=flat)](https://hex.pm/packages/ex_gpgme)
+[![Hex.pm Version](https://img.shields.io/hexpm/v/ex_gpgme.svg?style=flat)](https://hex.pm/packages/ex_gpgme)
 [![InchCI](https://inch-ci.org/github/jshmrtn/ex-gpgme.svg?branch=master)](https://inch-ci.org/github/jshmrtn/ex-gpgme)
 
 ## Build Requirements

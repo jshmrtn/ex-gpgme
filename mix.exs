@@ -10,9 +10,28 @@ defmodule ExGpgme.Mixfile do
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
       deps: deps(),
+      description: description(),
+      package: package(),
       compilers: [:rustler] ++ Mix.compilers,
       rustler_crates: rustler_crates(),
       dialyzer: [ignore_warnings: "dialyzer.ignore-warnings"],
+    ]
+  end
+
+  defp description do
+    """
+    Elixir NIF wrapper for `gpgme`.
+    """
+  end
+
+  defp package do
+    [
+      name: :ex_gpgme,
+      organization: "airatel",
+      files: ["lib", "mix.exs", "README*", "LICENSE"],
+      maintainers: ["airatel Inc.", "Jonatan Männchen"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/jshmrtn/ex-gpgme"}
     ]
   end
 
