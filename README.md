@@ -1,7 +1,9 @@
 # ExGpgme
 
-[![pipeline status](https://gitlab.airatel.com/joshmartin/ex-gpgme/badges/master/pipeline.svg)](https://gitlab.airatel.com/joshmartin/ex-gpgme/commits/master)
-
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/jshmrtn/ex-gpgme/master/LICENSE)
+[![Build Status](https://travis-ci.org/jshmrtn/ex-gpgme.svg?branch=master)](https://travis-ci.org/jshmrtn/ex-gpgme)
+[![Hex.pm Version](https://img.shields.io/hexpm/v/crontab.svg?style=flat)](https://hex.pm/packages/ex_gpgme)
+[![InchCI](https://inch-ci.org/github/jshmrtn/ex-gpgme.svg?branch=master)](https://inch-ci.org/github/jshmrtn/ex-gpgme)
 
 ## Build Requirements
 
@@ -11,8 +13,7 @@
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ex_gpgme` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `ex_gpgme` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -21,7 +22,4 @@ def deps do
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ex_gpgme](https://hexdocs.pm/ex_gpgme).
+The docs can be found at [https://hexdocs.pm/ex_gpgme](https://hexdocs.pm/ex_gpgme).
