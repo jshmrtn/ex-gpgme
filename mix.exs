@@ -27,7 +27,6 @@ defmodule ExGpgme.Mixfile do
   defp package do
     [
       name: :ex_gpgme,
-      organization: "airatel",
       files: ["lib", "mix.exs", "README*", "LICENSE"],
       maintainers: ["airatel Inc.", "Jonatan Männchen"],
       licenses: ["MIT"],
