@@ -6,7 +6,7 @@ defmodule ExGpgme.Mixfile do
   def project do
     [
       app: :ex_gpgme,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
       deps: deps(),
@@ -27,7 +27,7 @@ defmodule ExGpgme.Mixfile do
   defp package do
     [
       name: :ex_gpgme,
-      files: ["lib", "mix.exs", "README*", "LICENSE"],
+      files: ["lib", "mix.exs", "README*", "LICENSE", "native"],
       maintainers: ["airatel Inc.", "Jonatan Männchen"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/jshmrtn/ex-gpgme"}
