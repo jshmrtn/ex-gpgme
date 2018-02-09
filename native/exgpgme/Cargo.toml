@@ -12,4 +12,4 @@ crate-type = ["dylib"]
 rustler = "0.15.1"
 rustler_codegen = "0.15.1"
 lazy_static = "0.2"
-gpgme = { git = "https://github.com/jshmrtn/rust-gpgme.git" }
+gpgme = { git = "https://github.com/johnschug/rust-gpgme.git" }

@@ -44,7 +44,7 @@ defmodule ExGpgme.Mixfile do
     [
       {:rustler, "~> 0.10.1"},
       {:ex_doc, ">= 0.0.0", only: [:dev, :test], runtime: false},
-      {:inch_ex, ">= 0.0.0", only: :docs, runtime: false},
+      {:inch_ex, only: :docs, runtime: false},
       {:credo, "~> 0.5", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 0.4", only: [:dev, :test], runtime: false},
     ]
