@@ -33,7 +33,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "erlang_nif-sys"
-version = "0.6.2"
+version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "unreachable 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -110,7 +110,7 @@ name = "rustler"
 version = "0.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "erlang_nif-sys 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "erlang_nif-sys 0.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 0.1.16 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -164,7 +164,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum cfg-if 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "d4c819a1287eb618df47cc647173c5c4c66ba19d888a6e50d605672aed3140de"
 "checksum conv 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)" = "78ff10625fd0ac447827aa30ea8b861fead473bb60aeb73af6c1c58caf0d1299"
 "checksum custom_derive 0.1.7 (registry+https://github.com/rust-lang/crates.io-index)" = "ef8ae57c4978a2acd8b869ce6b9ca1dfe817bff704c220209fdef2c0b75a01b9"
-"checksum erlang_nif-sys 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)" = "6895d619f32e53b4e4ed02bd6a841de401111f60a6cf1e6b2cdbacf819a32841"
+"checksum erlang_nif-sys 0.6.3 (registry+https://github.com/rust-lang/crates.io-index)" = "2804cb6ae339787d993faafdd5e4af5a882128e44343a710d1061c487086eaa3"
 "checksum gcc 0.3.54 (registry+https://github.com/rust-lang/crates.io-index)" = "5e33ec290da0d127825013597dbdfc28bee4964690c7ce1166cbc2a7bd08b1bb"
 "checksum gpg-error 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "c732e7f1b15b2e2a3c8be3ccdc8d645d3c22628901252318931fa54c1e13e08f"
 "checksum gpgme 0.6.1 (git+https://github.com/johnschug/rust-gpgme.git)" = "<none>"
